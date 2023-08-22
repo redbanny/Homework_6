@@ -31,7 +31,7 @@ namespace Program_3
                     return (planet.PlanetNumber, planet.PlanetLength, null);
             }
             else
-                return (null, null, "Вы спрашиваете слишком часто");
+                return (null, null, validPlanet.Equals("Это запретная планета") ? validPlanet : "Вы спрашиваете слишком часто");
         }
 
     }

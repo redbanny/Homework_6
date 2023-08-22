@@ -7,11 +7,13 @@ foreach (var name in names)
 {
     var planet = catalogPlanet.GetPlanet(name, i =>
     {
+        if(i == "Лимония")
+            return "Это запретная планета";
         counter++;
         if (counter % 3 != 0)
             return null;
         else
-            return "Вы спрашиваете слишком часто";
+            return "Вы спрашиваете слишком часто";        
     });
     if (planet.error != null)
         Console.WriteLine(planet.error);
